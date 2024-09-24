@@ -57,7 +57,7 @@ function LogUpdate(&$arFields) {
 AddEventHandler("main", "OnBeforeEventAdd", array("MyClass", "OnBeforeEventAddHandler"));
 class MyClass
 {
-    function OnBeforeEventAddHandler(&$event, &$lid, &$arFields)
+    static function OnBeforeEventAddHandler(&$event, &$lid, &$arFields)
     {
        
         if($event == 'SALE_NEW_ORDER' && empty($arFields['ORDER_ID'])) {
@@ -115,7 +115,7 @@ function myFunctionBasketUpdate(Main\Event $event)
 AddEventHandler('main', 'OnBeforeEventSend', Array("MyForm", "my_OnBeforeEventSend"));
 class MyForm
 {
-   function my_OnBeforeEventSend(&$arFields, &$arTemplate)
+   static function my_OnBeforeEventSend(&$arFields, &$arTemplate)
    {
 		if($arTemplate['EVENT_NAME']=='SALE_NEW_ORDER'){
 			if (CModule::IncludeModule("catalog"))

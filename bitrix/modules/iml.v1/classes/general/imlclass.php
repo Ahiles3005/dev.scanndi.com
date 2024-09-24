@@ -934,7 +934,7 @@ class imldriver extends imlHelper{
 	()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()*/
 
 
-	function onEpilog(){//����������� �����
+	static function onEpilog(){//����������� �����
         global $APPLICATION;
 
         $workType = false;
@@ -1273,7 +1273,7 @@ class imldriver extends imlHelper{
 	}
 
 	// �������� ��� ������ �����
-	function displayActPrint(&$list){
+	static function displayActPrint(&$list){
 		if (!empty($list->arActions))
 			CJSCore::Init(array('ipolIml_printOrderActs'));
 		if($GLOBALS['APPLICATION']->GetCurPage() == "/bitrix/admin/sale_order.php")
