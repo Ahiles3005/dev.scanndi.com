@@ -66,13 +66,13 @@ class MyClass
         }
     }
 }
-AddEventHandler("sale", "OnBasketAdd", array("BasketUser", "onBasketUserAddOrUpdate"));
-AddEventHandler("sale", "OnBasketUpdate", array("BasketUser", "onBasketUserAddOrUpdate"));
-AddEventHandler("sale", "OnBeforeBasketDelete", array("BasketUser", "onBasketDelete"));
-AddEventHandler("sale", "OnSaleComponentOrderCreated", array("BasketUser", "deleteAllStoragesReminder"));
-AddEventHandler("sale", "OnSaleBasketItemRefreshData", Array("basketItemsChange", "onBasketItemGetChange"));
-AddEventHandler("iblock", "OnAfterIBlockElementUpdate", array("BasketUser", "changeStoreAvailableHighload"));
-AddEventHandler("main", "OnBeforeUserUpdate", Array("UserActivation", "OnBeforeUserUpdateHandler"));
+//AddEventHandler("sale", "OnBasketAdd", array("BasketUser", "onBasketUserAddOrUpdate"));
+//AddEventHandler("sale", "OnBasketUpdate", array("BasketUser", "onBasketUserAddOrUpdate"));
+//AddEventHandler("sale", "OnBeforeBasketDelete", array("BasketUser", "onBasketDelete"));
+//AddEventHandler("sale", "OnSaleComponentOrderCreated", array("BasketUser", "deleteAllStoragesReminder"));
+//AddEventHandler("sale", "OnSaleBasketItemRefreshData", Array("basketItemsChange", "onBasketItemGetChange"));
+//AddEventHandler("iblock", "OnAfterIBlockElementUpdate", array("BasketUser", "changeStoreAvailableHighload"));
+//AddEventHandler("main", "OnBeforeUserUpdate", Array("UserActivation", "OnBeforeUserUpdateHandler"));
 Main\EventManager::getInstance()->addEventHandler(
     'sale',
     'OnSaleBasketBeforeSaved',

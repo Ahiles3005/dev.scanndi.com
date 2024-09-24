@@ -84,7 +84,7 @@ if($id_n_b){
 	}
 }
 */
-if(count($_SESSION['SAVE_BASKET'])>0){
+if(is_array($_SESSION['SAVE_BASKET']) &&  count($_SESSION['SAVE_BASKET'])>0){
 	foreach($_SESSION['SAVE_BASKET'] as $ob){
 		$ProductId[$ob] = $ob;
 	}
