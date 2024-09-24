@@ -973,7 +973,7 @@ class imldriver extends imlHelper{
 		include_once($_SERVER['DOCUMENT_ROOT']."/bitrix/js/".self::$MODULE_ID."/orderDetail.php");
 	}
 	
-	function getCityTimeDeliv(){ // ��������� ���������� � ����/��� ������� ��������, �������, �������� �������
+	static function getCityTimeDeliv(){ // ��������� ���������� � ����/��� ������� ��������, �������, �������� �������
 		if(!file_exists($_SERVER["DOCUMENT_ROOT"].'/bitrix/js/'.self::$MODULE_ID.'/city.json'))
 			return false;
 		

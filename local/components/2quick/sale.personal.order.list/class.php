@@ -1181,9 +1181,13 @@ class CBitrixPersonalOrderListComponent extends CBitrixComponent
 			$this->arResult['ERRORS'] = $errors;
 
 		// backward compatiblity
-		$error = each($this->errorsFatal);
-		if (!empty($error['value']))
-			$this->arResult['ERROR_MESSAGE'] = $error['value'];
+        $errorsFatal = $this->errorsFatal;
+        foreach ($errorsFatal as $error) {
+            if (!empty($error['value'])) {
+                $this->arResult['ERROR_MESSAGE'] = $error['value'];
+                break;
+            }
+        }
 	}
 
 	/**

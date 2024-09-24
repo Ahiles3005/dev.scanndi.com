@@ -945,7 +945,7 @@ class CDeliveryIML extends imlHelper{
 			$city = self::toUpper($city);
 
 			if(!$orDate)
-				$orDate = mktime();
+				$orDate = time();
 
 			$cityAr=self::zaDEjsonit(json_decode(file_get_contents($_SERVER["DOCUMENT_ROOT"].'/bitrix/js/'.self::$MODULE_ID.'/city.json'),true));
 			$holidays=self::zaDEjsonit(json_decode(file_get_contents($_SERVER["DOCUMENT_ROOT"].'/bitrix/js/'.self::$MODULE_ID.'/holidays.json'),true));
@@ -1055,7 +1055,7 @@ class CDeliveryIML extends imlHelper{
 		$timeToSend['i']=date('i', strtotime($time));
 
 		if(!$orDate)
-			$orDate = mktime();
+			$orDate = time();
 		//�� ������� ��������� ������
 		return (mktime($timeToSend['H'],$timeToSend['i']) > mktime(date('H',$orDate),date('i',$orDate)));
 	}
