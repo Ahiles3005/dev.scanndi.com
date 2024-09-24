@@ -1279,7 +1279,7 @@ class imldriver extends imlHelper{
 		if($GLOBALS['APPLICATION']->GetCurPage() == "/bitrix/admin/sale_order.php")
 			$list->arActions['ipolIml_printOrderActs'] = GetMessage("IPOLIML_SIGN_PRNTIML");
 	}
-	function OnBeforePrologHandler(){ // ������� �� ������ �����
+	static function OnBeforePrologHandler(){ // ������� �� ������ �����
 		$otherway = (COption::GetOptionString(self::$MODULE_ID,'prntActOrdr','O') == 'A')?true:false; // ������ ������ ������ ����������, ���� true, �������� ������ ���
 		if(!array_key_exists('action', $_REQUEST) || !array_key_exists('ID', $_REQUEST))
 			return;
