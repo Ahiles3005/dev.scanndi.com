@@ -20,13 +20,13 @@ use \Bitrix\Main\Localization\Loc;
  * @var string $buttonSizeClass
  * @var CatalogSectionComponent $component
  */
-if (in_array($item['ID'], $arParams['FAVORITES'])) {
-	$fav_act = 'compfavdelete';
+if (is_array($arParams['FAVORITES']) && in_array($item['ID'], $arParams['FAVORITES'])) {
+    $fav_act = 'compfavdelete';
     $fav_img = SITE_TEMPLATE_PATH . '/images/setFavorite.svg';
-	$fav_class = 'fav_1';
+    $fav_class = 'fav_1';
     $span_class = '';
 } else {
-	$fav_act = 'compfav';
+    $fav_act = 'compfav';
     $fav_img = SITE_TEMPLATE_PATH . '/images/favorite.svg';
     $fav_class = 'fav_2';
     $span_class = 'active';
