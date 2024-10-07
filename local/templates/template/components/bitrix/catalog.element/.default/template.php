@@ -20,7 +20,7 @@ $this->setFrameMode(true);
 
 $haveOffers = !empty($arResult['OFFERS']);
 $sizeIsSelected = false;
-if (in_array($arResult['ID'], $arParams['FAVORITES'])) {
+if (is_array($arParams['FAVORITES']) && in_array($arResult['ID'], $arParams['FAVORITES'])) {
     $fav_action = 'compfavdelete';
     $fav_class = 'active';
 } else {
